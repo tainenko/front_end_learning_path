@@ -5,6 +5,47 @@ function once(){
 once()  
 once()  
 once()  
+
+Ans.  
+1. 閉包  
+
+            function once(fn) { 
+                var result;
+            
+              return  function() { 
+                    if(fn) {
+                        result = fn.apply(this, arguments);
+                        fn = null;
+                    }
+                    return result;
+                };
+
+2. 第一次調用後，把func清空，func= function(){};
+
+        var func = function () {
+            alert("正常调用");
+            func= function(){};
+        }
+        func();
+        func();
+ 
+
+3. 設置flag，透過flag控制function的調用。
+
+            var flag = true;
+
+            function once() {
+                if (flag) {
+                    alert("我被调用");
+                    flag = false;
+                } else {
+                    return;
+                }
+            }
+            once();
+            once();
+
+
 1-2 改寫once，使之接受以下用法  
 Const newOnce = once(word=>  
 console.log(word))  
