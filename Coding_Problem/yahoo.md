@@ -54,10 +54,17 @@ newOnce(‘hello’)
 newOnce(‘hello’)  
 
 2.給一正整數陣列n跟正整數target，如果任意兩整數相加等於target，就回傳一陣列存這兩個整數的index，例如n=[1,3,2,9],target=10就回傳[0,3]  
+Ans.  
+TwoSum  
 
 3.有一個按鈕，點了會跳出popup，點popup背景可以關掉popup，寫HTML,CSS,JS  
 
 4.有一組連續的數字，但沒有排序過，從1~10000，有一個數字有重複，問怎麼找出這個重複的數字。  
+Ans.  
+1. 數學法  
+將array全部的數字累加，其結果減去1~10000的和，差值即為重複的數字。  
+2. 遍歷  
+只要array當前的index與value不相等，則做一次判斷，if arr[i]==arr[arr[i]]，如果兩者相等就是找到了重複的數字，如果不相等就交換兩者，繼續往下找。  
 
 5.怎麼判斷Linked list裡面形成迴圈(最後一個node指向某個node而不是null)  
 
