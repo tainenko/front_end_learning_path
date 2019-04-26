@@ -67,6 +67,8 @@ Ans.
 只要array當前的index與value不相等，則做一次判斷，if arr[i]==arr[arr[i]]，如果兩者相等就是找到了重複的數字，如果不相等就交換兩者，繼續往下找。  
 
 5.怎麼判斷Linked list裡面形成迴圈(最後一個node指向某個node而不是null)  
+Ans.  
+  使用兩個指標，快慢一起遍歷，如果快指標追上了慢指標，則linked list裡有迴圈，如果查找到node=null，則回報沒有迴圈存在。  
 
 6.為什麼要用translate，比起position差別在哪？  
 
